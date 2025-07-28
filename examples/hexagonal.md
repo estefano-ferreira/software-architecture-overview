@@ -4,25 +4,41 @@ Hexagonal Architecture isolates core business logic from infrastructure, allowin
 
      /src
      ├── Application
-     │ ├── Interfaces # Input/output ports
-     │ └── UseCases # Business logic
+     │   ├── Interfaces # Input/output ports
+     │   └── UseCases # Business logic
      ├── Domain
-     │ ├── Entities
-     │ ├── ValueObjects
-     │ └── DomainEvents
+     │   ├── Entities
+     │   ├── ValueObjects
+     │   └── DomainEvents
      ├── Infrastructure
-     │ ├── Repositories # EF Core / MongoDB
-     │ ├── Email # SMTP implementations
-     │ └── APIClients # External service integrations
+     │   ├── Repositories # EF Core / MongoDB
+     │   ├── Email # SMTP implementations
+     │   └── APIClients # External service integrations
      └── WebAPI
-     ├── Controllers
-     └── Program.cs
+         ├── Controllers
+         └── Program.cs
 
-## 🧩 Core Concepts
 
-- **Core (Domain + Application)**: contains business rules and use cases
-- **Ports**: interfaces that define how the outside world interacts with the core
-- **Adapters**: implementations of those interfaces (e.g., database, HTTP clients)
 
-## 🧰 Typical Structure in .NET
+## 🧠  Layers and Responsibilities
+
+🔷 **Application**  
+     - Contains the application use cases (e.g., CreateLoan, RegisterCustomer).  
+     - Defines interfaces (ports) that will be implemented externally.  
+     - Does not depend on infrastructure or frameworks.
+
+🧩 **Domain**  
+     - The heart of the business logic, completely pure.  
+     - Defines entities, value objects, and domain events.  
+     - Can be tested in isolation.
+
+⚙️ **Infrastructure**  
+     - Implements the Application interfaces (adapters).  
+     - Integrates with external technologies: databases, services, messaging, etc.  
+     - Examples: CustomerRepository with EF Core, EmailSender with SMTP.
+
+🌐 **WebAPI**  
+     - Layer responsible for exposing the application via HTTP.  
+     - Contains controllers and the Program.cs file.  
+     - Receives requests, invokes use cases, and returns responses.
 
