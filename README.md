@@ -10,7 +10,7 @@ A curated summary of the most used software architectures in modern backend and 
 - [Microservices Architecture](#microservices-architecture)
 - [Event-Driven Architecture](#event-driven-architecture)
 - [CQRS and Event Sourcing](#cqrs-and-event-sourcing)
-- [Hexagonal Architecture (Ports & Adapters)](#hexagonal-architecture)
+- [Hexagonal Architecture (Ports & Adapters)](/examples/hexagonal.md)
 - [Domain-Driven Design (DDD)](#domain-driven-design)
 - [Bonus: Clean Architecture](#clean-architecture)
 
