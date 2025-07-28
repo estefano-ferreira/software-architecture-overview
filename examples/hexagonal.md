@@ -41,4 +41,6 @@ Hexagonal Architecture isolates core business logic from infrastructure, allowin
      - Layer responsible for exposing the application via HTTP.  
      - Contains controllers and the Program.cs file.  
      - Receives requests, invokes use cases, and returns responses.
-
+     
+## 🔗 References & Tools
+- [Common web application architectures](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures#domain-driven-design-ddd)
