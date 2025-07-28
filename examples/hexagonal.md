@@ -1,7 +1,7 @@
 # 🛠 Hexagonal Architecture (Ports & Adapters)
 
 Hexagonal Architecture isolates core business logic from infrastructure, allowing flexibility and high testability.
-
+´´´
 /Solution
 ├── Application
 │ ├── Interfaces # Input/output ports
@@ -17,7 +17,7 @@ Hexagonal Architecture isolates core business logic from infrastructure, allowin
 └── WebAPI
 ├── Controllers
 └── Program.cs
-
+´´´
 ## 🧩 Core Concepts
 
 - **Core (Domain + Application)**: contains business rules and use cases
