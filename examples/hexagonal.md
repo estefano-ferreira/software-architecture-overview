@@ -2,7 +2,7 @@
 
 Hexagonal Architecture isolates core business logic from infrastructure, allowing flexibility and high testability.
 
-     /Solution
+     /src
      ├── Application
      │ ├── Interfaces # Input/output ports
      │ └── UseCases # Business logic
